@@ -27,17 +27,19 @@ bot.on("message", function(message) {
 
     // "+VAR_NAME+" Allows you to print a variable
     switch(argv[0].toLowerCase()) {
-        case "ping":
-            message.channel.send("Ping!");
+        case "help":
+            message.channel.send("Prefix:>> tst - set a text u type!");
             break;
-        case "embed":
-            var embedd = new Discord.RichEmbed()
-                .addField("Title", "Description")
-            message.channel.sendEmbed(embedd);
-                // .catch(console.error);
-            break;
+        case "tst":
+            var embed = new Discord.RichEmbed()
+            .setTitle(`Title`)
+            .setDescription(`Desc`)
+            .addField("Title", "Description")
+             message.channel.sendEmbed(embed);
+            // .catch(console.error);
+           break;
         default:
-            message.channel.send("Invalid commands");
+            message.channel.send("𝐔𝐍𝐊𝐍𝐎𝐖-𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒");
     }
 
 });
