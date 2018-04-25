@@ -31,9 +31,9 @@ bot.on("message", function(message) {
             break;
         case "tst":
             var embed = new Discord.RichEmbed()
-            .setTitle(`Title`)
+            .setColor(`#da89fe`)
+            .setTitle(`BotCommands`)
             .setDescription(`Desc`)
-            .addField("Title", "Description")
              message.channel.sendEmbed(embed);
             // .catch(console.error);
            break;
