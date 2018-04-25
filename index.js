@@ -50,6 +50,7 @@ bot.on("message", function(message) {
             .setColor(`#da89fe`)
             .setTitle(`Avatar`)
             .setImage(message.author.avatarURL)
+            .setFooter(`Power By TaMoToJi`)
              message.channel.sendEmbed(embed);
            break;
         default:
