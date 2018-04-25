@@ -42,8 +42,8 @@ bot.on("message", function(message) {
             .setColor(`#da89fe`)
             .setTitle(`BotCommands`)
             .setDescription(`Desc`)
+            .setThumbnail(message.author.avatarURL)
              message.channel.sendEmbed(embed);
-            // .catch(console.error);
            break;
         default:
             message.channel.send("𝐔𝐍𝐊𝐍𝐎𝐖-𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒");
