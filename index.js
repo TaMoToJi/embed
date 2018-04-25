@@ -32,12 +32,14 @@ bot.on("message", function(message) {
     // "+VAR_NAME+" Allows you to print a variable
     switch(argv[0].toLowerCase()) {
         case "help":
-            if(!message.member.roles.some(r=>["OWNER"].includes(r.name)) )
-        return message.reply("Sorry, you don't have permissions to use this!")
-            message.channel.send("Prefix:>> tst - set a text u type!");
+            var embed = new Discord.RichEmbed()
+            .setColor(`#da89fe`)
+            .setTitle(`Bot Command\navatar - search your avatar`)
+            .setThumbnail(message.author.avatarURL)
+             message.channel.sendEmbed(embed);
             message.channel.send(text);
             break;
-        case "tst":
+        case "avatar":
             var embed = new Discord.RichEmbed()
             .setColor(`#da89fe`)
             .setTitle(`BotCommands`)
