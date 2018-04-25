@@ -37,7 +37,6 @@ bot.on("message", function(message) {
             .setTitle(`Bot Command\navatar - search your avatar`)
             .setThumbnail(message.author.avatarURL)
              message.channel.sendEmbed(embed);
-            message.channel.send(text);
             break;
         case "avatar":
             var embed = new Discord.RichEmbed()
