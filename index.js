@@ -1,6 +1,18 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+comst YTDL = require("ytdl-core");
+
 const PREFIX = "_";
+
+function play(connection, message) {
+    var server = servers[message.guild.id];
+
+    server.dispatcher = connection.playsteam(YTDL(server.queue[0], {filter: "audioonly"}));
+    
+    server.queue.shift();
+
+    server.dispatcher.on("end", function() {
+}
 
 var name;
 var usrAuth = 0;
@@ -52,6 +64,39 @@ bot.on("message", function(message) {
             .setImage(message.author.avatarURL)
              message.channel.sendEmbed(embed);
            break;
+        case "play":
+            if (!args[1]) {
+                message.channel.sandMessage("Please provide alink");
+                return;
+            }
+           
+            if (!message.member.voiceChannel) {
+                message.channel.sandMessage("You must to in a voice channel");
+                require;
+
+            if(!servers[message.guild.id]) servers[message.guild.id] = {
+                queue: [] 
+            };
+            
+            var server = servers[message.guild.id];
+
+            server.queue.push(args[1]);
+
+            if (!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
+            });
+            break;
+            
+        case "skip":
+            var server = servers[message.guild.id];
+
+            if(server.dispatcher) server.dispatcher.end();
+            break;
+        case "stop":
+            var server = servers[message.guild.id];
+
+            if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+            break;
+
         default:
             message.channel.send("𝐔𝐍𝐊𝐍𝐎𝐖-𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒");
     }
