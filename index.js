@@ -7,7 +7,7 @@ var usrAuth = 0;
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`with HeaLOng`);
+  bot.user.setActivity(`Config Erorr`);
 });
 
 bot.on("ready", function() {
@@ -36,7 +36,6 @@ bot.on("message", function(message) {
         return message.reply("Sorry, you don't have permissions to use this!")
             message.channel.send("Prefix:>> tst - set a text u type!");
             message.delete();
-            message.channel.send(text);
             break;
         case "tst":
             var embed = new Discord.RichEmbed()
