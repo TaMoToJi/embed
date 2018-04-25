@@ -34,15 +34,15 @@ bot.on("message", function(message) {
         case "help":
             var embed = new Discord.RichEmbed()
             .setColor(`#da89fe`)
-            .setTitle(`Bot Command\navatar - search your avatar`)
+            .setTitle(`Bot Command`)
+            .setDescription(`avatar - seach user avatar`)
             .setThumbnail(message.author.avatarURL)
              message.channel.sendEmbed(embed);
             break;
         case "avatar":
             var embed = new Discord.RichEmbed()
             .setColor(`#da89fe`)
-            .setTitle(`BotCommands`)
-            .setDescription(`Desc`)
+            .setTitle(`Avatar`)
             .setImage(message.author.avatarURL)
              message.channel.sendEmbed(embed);
            break;
