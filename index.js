@@ -35,6 +35,8 @@ bot.on("message", function(message) {
             if(!message.member.roles.some(r=>["OWNER"].includes(r.name)) )
         return message.reply("Sorry, you don't have permissions to use this!")
             message.channel.send("Prefix:>> tst - set a text u type!");
+            message.delete();
+            message.channel.send(text);
             break;
         case "tst":
             var embed = new Discord.RichEmbed()
