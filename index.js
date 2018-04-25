@@ -2,14 +2,13 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const PREFIX = "_";
 
-client.on("guildDelete", guild => {
-  // this event triggers when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`With TaMoToJi`);
-});
-
 var name;
 var usrAuth = 0;
+
+bot.on("ready", async () => {
+  console.log(`${bot.user.username} is online!`);
+  bot.user.setActivity(`with HeaLOng`);
+});
 
 bot.on("ready", function() {
 
