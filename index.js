@@ -7,7 +7,7 @@ var usrAuth = 0;
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`Spectator`);
+  bot.user.setActivity(`Config`);
 });
 
 bot.on("ready", function() {
