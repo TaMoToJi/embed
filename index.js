@@ -54,7 +54,7 @@ bot.on("message", function(message) {
              message.channel.sendEmbed(embed);
            break;
         default:
-            message.channel.send("𝐔𝐍𝐊𝐍𝐎𝐖-𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒");
+            message.channel.send("unknow command , please do _help for help");
     }
 
 });
