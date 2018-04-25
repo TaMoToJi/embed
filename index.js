@@ -10,15 +10,15 @@ bot.on("ready", async () => {
   bot.user.setActivity(`Config Erorr`);
 });
 
-bot.on("guildMemberAdd", function(member) {
-    member.guild.channel.find("name", "general").sandMessage(member.toString() * "Welcome To GodRules Server");
-
-    member.addRole(member.guild.roles.find("name", (MEMBER)};
-});
-
 bot.on("ready", function() {
 
     console.log("Ready");
+});
+
+bot.on("guildMemberAdd", function(member) {
+    member.guild.channel.find("name", "general").sandMessage(member.toString() * "Welcome To GodRules Server");
+
+    member.addRole(member.guild.roles.find("name", "MEMBER"));
 });
 
 bot.on("message", function(message) {
