@@ -27,6 +27,8 @@ bot.on("message", function(message) {
     // "+VAR_NAME+" Allows you to print a variable
     switch(argv[0].toLowerCase()) {
         case "help":
+            if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!")
             message.channel.send("Prefix:>> tst - set a text u type!");
             break;
         case "tst":
